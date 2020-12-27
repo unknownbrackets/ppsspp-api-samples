@@ -1,0 +1,11 @@
+{
+  "name": "ppsspp-api-samples",
+  "version": "1.0.0",
+  "homepage": "https://www.ppsspp.org/",
+  "license": "ISC",
+  "dependencies": {
+    "cross-fetch": "^3.0.6",
+    "isomorphic-ws": "^4.0.1",
+    "ws": "^7.4.1"
+  }
+}
