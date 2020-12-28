@@ -10,23 +10,23 @@ const ppsspp = new PPSSPP();
 // The autoConnect() function tries to find a nearby PPSSPP instance.
 // If you have multiple, it may be the wrong one.
 ppsspp.autoConnect().then(() => {
-    // Introduce ourselves to PPSSPP.  Here, '1.0.0' should be the version of your script.
-    return ppsspp.send({ event: 'version', name: 'ppsspp-api-samples', version: '1.0.0' });
+	// Introduce ourselves to PPSSPP.  Here, '1.0.0' should be the version of your script.
+	return ppsspp.send({ event: 'version', name: 'ppsspp-api-samples', version: '1.0.0' });
 }).then((result) => {
-    // In response, PPSSPP tells us its version too.  Well met.
-    console.log('Connected to', result.name, 'version', result.version);
+	// In response, PPSSPP tells us its version too.  Well met.
+	console.log('Connected to', result.name, 'version', result.version);
 
-    // So - what game's running?
-    return ppsspp.send({ event: 'game.status' });
+	// So - what game's running?
+	return ppsspp.send({ event: 'game.status' });
 }).then((result) => {
-    if (result.game === null) {
-        console.log('You aren\'t playing any game yet?  Boring.');
-        return;
-    }
+	if (result.game === null) {
+		console.log('You aren\'t playing any game yet?  Boring.');
+		return;
+	}
 
-    console.log('Playing', result.game.title, '(' + result.game.id, 'version', result.game.version + ')');
+	console.log('Playing', result.game.title, '(' + result.game.id, 'version', result.game.version + ')');
 }).catch((err) => {
-    console.error('Something went wrong:', err);
+	console.error('Something went wrong:', err);
 }).finally(() => {
-    ppsspp.disconnect();
+	ppsspp.disconnect();
 });
