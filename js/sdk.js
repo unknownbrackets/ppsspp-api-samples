@@ -27,7 +27,7 @@
 //
 // Properties:
 //  - onError: Set this to a function receiving (message, level) for errors.
-//  - onClose: Set this to a function with no parameters called when on disconnect.
+//  - onClose: Set this to a function with no parameters called on disconnect.
 //
 // For documentation on the actual events for send() and listen(), look in PPSSPP's source code.
 // Start with the comment in Core/Debugger/WebSocket.cpp.

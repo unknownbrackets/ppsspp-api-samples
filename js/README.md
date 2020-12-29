@@ -29,8 +29,8 @@ step-by-step ones.
 
 To learn more about promises, see:
 
-[Mozilla Developer Network - Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-[OpenJS - Promises walkthrough](https://nodejs.dev/learn/understanding-javascript-promises)
+ * [Mozilla Developer Network - Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+ * [OpenJS - Promises walkthrough](https://nodejs.dev/learn/understanding-javascript-promises)
 
 
 More reading
