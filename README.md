@@ -17,6 +17,9 @@ To run these samples, you'll always need to enable debugging in PPSSPP:
 The remote debugger shares a port with the remote disc streaming.  Currently, its port can be
 explicitly set there.
 
+Please also note that these samples may depend on features of recent git builds at times, so they
+may not always work on stable PPSSPP releases.  It's always recommended to use a recent git build.
+
 
 Documentation
 -------------

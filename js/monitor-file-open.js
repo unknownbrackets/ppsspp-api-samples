@@ -57,7 +57,7 @@ ppsspp.autoConnect().then(() => {
 		// Note that we keep the CPU paused while reading, so the path isn't corrupted in RAM.
 		ppsspp.send({ event: 'cpu.getReg', name: 'a0' }).then((result) => {
 			// Read the string value from RAM.
-			return readASCIIStringAt(result.uintValue);
+			return readStringAt(result.uintValue);
 		}).then(str => {
 			console.log('Opening', str + '...');
 			// Don't forget to unbreak the CPU, we're done reading now.
@@ -92,22 +92,10 @@ process.on('SIGINT', () => {
 	});
 });
 
-// This helper is recursive and reads a null terminated string from PPSSPP.
-// There may be more efficient ways, but this is a simple way to do it.
-// This is also ASCII only, would be a bit more complex to handle UTF-8.
-function readASCIIStringAt(addr) {
+// This reads a string, assumed to be utf-8, from PSP memory.
+function readStringAt(addr) {
 	// Read the byte at that address...
-	return ppsspp.send({ event: 'memory.read_u8', address: addr }).then(result => {
-		// If it's the terminator, we're done - return an empty string.
-		if (result.value === 0) {
-			return '';
-		}
-
-		// Ohterwise, recurse and read the remainder of the string.
-		return readASCIIStringAt(addr + 1).then(str => {
-			// Add the byte we just read to the front of the recursed result.
-			// Note: this assumes ASCII.
-			return String.fromCharCode(result.value) + str;
-		});
+	return ppsspp.send({ event: 'memory.readString', address: addr }).then(result => {
+		return result.value;
 	});
 }
