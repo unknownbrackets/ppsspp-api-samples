@@ -1,4 +1,4 @@
-// PPSSPP API sample - simple hello
+// PPSSPP API sample - memory access
 //
 // In this sample, we read a chunk of memory from the running game.
 //

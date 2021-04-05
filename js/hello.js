@@ -9,6 +9,7 @@ const ppsspp = new PPSSPP();
 
 // The autoConnect() function tries to find a nearby PPSSPP instance.
 // If you have multiple, it may be the wrong one.
+// You can also use: ppsspp.connect('ws://127.0.0.1:12345/debugger').then(() => {
 ppsspp.autoConnect().then(() => {
 	// Introduce ourselves to PPSSPP.  Here, '1.0.0' should be the version of your script.
 	return ppsspp.send({ event: 'version', name: 'ppsspp-api-samples', version: '1.0.0' });
