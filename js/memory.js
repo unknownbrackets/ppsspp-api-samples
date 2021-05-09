@@ -22,5 +22,10 @@ ppsspp.autoConnect().then(() => {
 }).catch((err) => {
 	console.error('Something went wrong:', err);
 }).finally(() => {
-	ppsspp.disconnect();
+	try {
+		ppsspp.disconnect();
+	} catch (e) {
+		// PPSSPP must've been closed or we lost network.
+		console.error('Could not disconnect', e);
+	}
 });
