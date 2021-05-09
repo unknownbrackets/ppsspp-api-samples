@@ -1,9 +1,9 @@
 JavaScript
 ==========
 
-The samples here are meant to be used with [Node.js]() and utilize Promises, fetch, and other modern JavaScript features.
+The samples here are meant to be used with [Node.js][] and utilize Promises, fetch, and other modern JavaScript features.
 
-It's possible to use these within browsers too.  Consider leveraging something like [Babel]() if needed to adjust the JavaScript syntax for more outdated browsers.
+It's possible to use these within browsers too.  Consider leveraging something like [Babel][] if needed to adjust the JavaScript syntax for more outdated browsers.
 
 
 Usage
@@ -12,7 +12,7 @@ Usage
 To run these samples, the following steps are required:
 
  - Make sure "Allow remote debugger" is enabled in PPSSPP, under Settings -> Tools -> Developer tools.
- - Install [Node.js]() (on many platforms, just from the installer on the website.)
+ - Install [Node.js][] (on many platforms, just from the installer on the website.)
  - Clone this repo.
  - Open a terminal and run `npm install` in this folder to install dependencies.
  - Run `node hello.js`
@@ -36,10 +36,10 @@ To learn more about promises, see:
 More reading
 ------------
 
-The [web debugger]() is implemented in JavaScript too, using React.  Its source code may be helpful
+The [web debugger][] is implemented in JavaScript too, using React.  Its source code may be helpful
 for understanding the API and its usage too.
 
-Actual API parameters and responses are documented in the [PPSSPP source code for the API]().
+Actual API parameters and responses are documented in the [PPSSPP source code for the API][].
 
 
 Contributing
@@ -48,7 +48,7 @@ Contributing
 Whether you're interested in contributing better documentation, better samples, or better APIs -
 contributions are always welcome.
 
-Feel free to open an issue or pull request in this repo.  You can also visit [our Discord]() in
+Feel free to open an issue or pull request in this repo.  You can also visit [our Discord][] in
 the #coding_development channel.
 
 

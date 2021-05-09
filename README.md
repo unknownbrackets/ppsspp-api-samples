@@ -24,10 +24,10 @@ may not always work on stable PPSSPP releases.  It's always recommended to use a
 Documentation
 -------------
 
-The [web debugger]() is implemented in JavaScript too, using React.  Its source code may be helpful
+The [web debugger][] is implemented in JavaScript too, using React.  Its source code may be helpful
 for understanding the API and its usage too.
 
-Actual API parameters and responses are documented in the [PPSSPP source code for the API]().
+Actual API parameters and responses are documented in the [PPSSPP source code for the API][].
 
 
 Contributing
@@ -36,7 +36,7 @@ Contributing
 Whether you're interested in contributing better documentation, better samples, or better APIs -
 contributions are always welcome.
 
-Feel free to open an issue or pull request in this repo.  You can also visit [our Discord]() in
+Feel free to open an issue or pull request in this repo.  You can also visit [our Discord][] in
 the #coding_development channel.
 
 
